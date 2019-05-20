@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Atividade 2</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+<link rel="stylesheet" href="resources/plugins/owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="resources/plugins/owlcarousel/owl.theme.default.min.css">
+
+<link rel="stylesheet" href="resources/css/style.css">
+
+</head>
+<body>
+
+<!-- Início Bloco A -->
+<header class="navbar navbar-expand-md navbar-light bg-light col-md-12">
+    
+    <figure> 
+        <a href="#" class="navbar-brand">
+            <div class="wi wi-day-cloudy"></div>
+        </a>
+    </figure>
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <nav class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+        <ul class="navbar-nav">
+            <li><a href="#" class="nav-item nav-link active">Home</a></li>
+            <li><a href="#recentes" class="nav-item nav-link">Recentes</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Sub itens</a>
+                <ul class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Sub item 1</a>
+                    <a href="#" class="dropdown-item">Sub item 2</a>
+                    <a href="#" class="dropdown-item">Sub item 3</a>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link">Login</a>
+        </div>
+
+    </nav>
+</header>
+<!-- Fim Bloco A -->
+
+<!-- Início Bloco B -->
+<aside class='busca-localizacoes col-md-12'>
+    <form>
+        <div class="input-group">                    
+            <input type="text" class="form-control" placeholder="Buscar cidade" id="busca-localizacao">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+</aside>
+<!-- Fim Bloco B -->
+
+
+<main class="container">
+    <div class="row">
+        <!-- Início Bloco C -->
+        <div class="col-md-8 col-sm-12" id='resultado'>
+            Conteúdo principal
+        </div>
+        <!-- Fim Bloco C -->
+        
+        
+        <!-- Início Bloco D -->
+        <aside class="col-md-4 col-sm-4 d-none d-sm-block" id='recentes'>
+            <h2>Pesquisas recentes</h2>
+            <ul></ul>
+            <a href='#' id="limparHistorico" style="display: none;" onClick='limparHistorico(this)'>limpar histórico</a>
+        </aside>
+        <!-- Fim Bloco D -->
+    </div>
+</main>
+
+
+<!-- Início Bloco E -->
+<footer class="col-md-12">
+    Footer
+</footer>
+<!-- Fim Bloco E -->
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="resources/plugins/owlcarousel/owl.carousel.min.js"></script>
+
+<script src="resources/js/scripts.js"></script>
+
+<script>
+    $( function() {
+
+        $(document).on('keyup', '#busca-localizacao'  ,function(){
+            getLocation();
+        });
+        
+        if(localStorage.getItem("cityCode") != undefined)
+            getPrevisao(localStorage.getItem("cityCode"));
+    });
+</script>
+
+</body>
+</html>                            

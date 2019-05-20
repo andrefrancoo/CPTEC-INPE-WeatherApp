@@ -1,0 +1,98 @@
+header figure a{
+        border-radius: 10px;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 5px 2px;
+    }
+
+    header figure a div{
+        font-size: 2em;
+    }
+
+
+    .main-content{
+        margin: 20px;
+    }
+
+    .busca-localizacoes{
+        max-width: 100%;
+        margin: 20px auto;
+    }
+    
+    main.container{
+        min-width: 100%;
+    }
+    main.container .row{
+        padding: 0 15px;
+    }
+
+    #resultado{
+        padding: 10px 0;
+        background-color: #f0f0f0;
+    }
+    #resultado h1{
+        font-weight: normal;
+    }
+    .owl-carousel{
+        padding: 10px;
+    }
+    .owl-carousel section{
+        padding: 10px;
+        background-color: #b0b0b0;
+    }
+
+    .owl-carousel section .previsao-icons{
+        padding: 10;
+        margin: -10px;
+        margin-top: 10px;
+        background-color: #FFFFFF;
+    }
+
+    @keyframes pulse_animation {
+        0% { transform: scale(1); }
+        30% { transform: scale(1); }
+        40% { transform: scale(1.08); }
+        50% { transform: scale(1); }
+        60% { transform: scale(1); }
+        70% { transform: scale(1.05); }
+        80% { transform: scale(1); }
+        100% { transform: scale(1); }
+    }
+
+    .owl-carousel section i.tempo{
+        font-size: 3em;
+        width: 100%;
+        padding: 10px;
+
+        animation-name: pulse_animation;
+        animation-duration: 2000ms;
+        transform-origin:70% 70%;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .owl-carousel section .previsao-icons{
+        padding: 10px;
+    }
+    .owl-carousel section .previsao-icons > div{
+        max-width: 33.3% !important ;
+    }
+    .owl-carousel section .previsao-icons i{
+        padding: 0 5px;
+    }
+    .owl-carousel section .previsao-icons i.min{
+        color: blue;
+    }
+    .owl-carousel section .previsao-icons i.max{
+        color: red
+    }
+    .owl-carousel section .previsao-icons i.uv{
+        color: orange;
+    }
+    
+    @media screen and (max-width: 767px) {
+        #resultado{
+            margin: 0;
+        }
+    }
