@@ -236,8 +236,8 @@
                 <i class="wi wi-${condicoesIcons[$(this).find("tempo").text()]} tempo"></i>
                 ${condicoesText[$(this).find("tempo").text()]}
                 <div class='previsao-icons row'>
-                    <div class='col-md-4 col-sm-4 col-xs-4' data-toggle="tooltip" data-placement="top" title="Máxima"><i class="fa fa-arrow-down min" aria-hidden="true"></i>${$(this).find("minima").text()}</div>
-                    <div class='col-md-4 col-sm-4 col-xs-4' data-toggle="tooltip" data-placement="top" title="Mínima"><i class="fa fa-arrow-up max" aria-hidden="true"></i>${$(this).find("maxima").text()}</div>
+                    <div class='col-md-4 col-sm-4 col-xs-4' data-toggle="tooltip" data-placement="top" title="Mínima"><i class="fa fa-arrow-down min" aria-hidden="true"></i>${$(this).find("minima").text()}</div>
+                    <div class='col-md-4 col-sm-4 col-xs-4' data-toggle="tooltip" data-placement="top" title="Máxima"><i class="fa fa-arrow-up max" aria-hidden="true"></i>${$(this).find("maxima").text()}</div>
                     <div class='col-md-4 col-sm-4 col-xs-4' data-toggle="tooltip" data-placement="top" title="UV"><i class="fa fa-sun-o uv" aria-hidden="true"></i>${$(this).find("iuv").text()}</div>
                 </div>`;
 
